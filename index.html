@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D rotating image gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <span style="--i:1;"><img src="img/123.jpg" alt="image1"></span>
+        <span style="--i:2;"><img src="img/4141.jpg" alt="image2"></span>
+        <span style="--i:3;"><img src="img/lav.jpg" alt="image3"></span>
+        <span style="--i:4;"><img src="img/sav.jpg" alt="image4"></span>
+        <span style="--i:5;"><img src="img/WhatsApp Image 2024-11-19 at 01.53.48_b389f448.jpg" alt="image5"></span> -->
+        </div>
+
+    <script type="text/javascript">
+        let box = document.querySelector('.box'); // Corrected 'queryselector' to 'querySelector'
+        window.onmousemove = function (e) {
+            let x = e.clientX / 3; // Corrected 'clientx' to 'clientX'
+            box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
+        };
+    </script>
+    
+</body>
+</html>
